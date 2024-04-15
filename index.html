@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <form id="taxcalci">
+                <div class="input-group">
+                    <label for="income" class="change" title="Gross annual income is your total salary in a year before any deductions">Enter gross annual income <span>?</span></label><br>
+                    <input type="number" id="income" name="income" min="0" placeholder="Enter gross annual income">
+                    <span class="error-symbol" id="incomeError">!</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="extraIncome" class="change" title="It is the extra money beyond your regular paycheck">Enter extra income <span>?</span></label><br>
+                    <input type="number" id="extraIncome" name="extraIncome" min="0" placeholder="Enter extra income from other sources">
+                    <span class="error-symbol" id="extraIncomeError">!</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="age">Enter age group:</label><br>
+                    <input type="number" id="age" name="age" min="0">
+                    <span class="error-symbol" id="ageError">!</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="deductions" class="change" title="It is an amount deducted from taxable income">Enter total applicable deductions<span>?</span></label><br>
+                    <input type="number" id="deductions" name="deductions" min="0" placeholder="Enter total applicable deductions">
+                    <span class="error-symbol" id="deductionsError">!</span>
+                </div>
+                
+                <button type="submit" id="calculateBtn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

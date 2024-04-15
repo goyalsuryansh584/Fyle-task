@@ -1,0 +1,139 @@
+.main-container {
+    width: 30%;
+    margin: 100px auto;
+    border: 2px solid rgb(180, 180, 180); 
+    padding: 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    position: relative;
+    text-align: left; 
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: -10px; 
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: 300px; 
+    height: 20px; 
+    padding-right: 15px; 
+}
+
+.change {
+    position: relative;
+}
+
+.change span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    color: #494949;
+    cursor: pointer;
+    margin-left: 5px;
+    position:relative;
+}
+
+.change:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #444444;
+    color: #f7e3e3;
+    border-radius: 5px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.error-symbol {
+    position: absolute;
+    top: 40px;
+    right: 5px; 
+    transform: translateY(-50%);
+    color: red;
+    display: none;
+    cursor: pointer;
+}
+
+.error-symbol:hover::after {
+    content: "Please enter a valid number";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: rgba(72, 72, 72, 0.7);
+    color: rgb(253, 239, 239);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    font-size: 12px;
+    white-space:nowrap;
+}
+
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px; 
+    width: 80%;
+    text-align: center; 
+    position: relative; 
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 80%;
+    }
+}
